@@ -1,278 +1,73 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentos</title>
-    <style>
-        /* Resetear márgenes y padding del body para aprovechar todo el espacio */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        
-        /* Contenedor principal que ocupa toda la pantalla */
-        .docs-container {
-            width: 100vw;
-            height: 100vh;
-            position: relative;
-            background-color: transparent;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        /* Iframe del visor de documentos - perfectamente centrado */
-        .docs-viewer {
-            width: 90vw;
-            height: 90vh;
-            border: none;
-            display: block;
-            background-color: transparent;
-            margin: 0 auto;
-        }
-        
-        /* Contenedor adicional para centrar mejor el iframe */
-        .iframe-wrapper {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        /* Responsive para tablets */
-        @media (max-width: 768px) {
-            .docs-viewer {
-                width: 95vw;
-                height: 95vh;
-            }
-        }
-        
-        /* Responsive para móviles */
-        @media (max-width: 480px) {
-            .docs-viewer {
-                width: 98vw;
-                height: 98vh;
-            }
-        }
-        
-        /* Asegurar que no haya scroll en el contenedor padre */
-        html {
-            overflow: hidden;
-            height: 100%;
-            background-color: transparent;
-        }
+<html lang="ja" style="--c-bg: hsl(0, 0%, 5%); --c-text: hsl(0, 0%, 95%); --vw: 13.85px; --vh: 12.46px; --vmax: 13.85px; --vmin: 12.46px;"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keita Yamada</title><meta name="description" content="Designer and Developer in Japan"><link rel="canonical" href="https://p5aholic.me"><meta property="og:locale" content="ja_JP"><meta property="og:type" content="website"><meta property="og:site_name" content="Keita Yamada"><meta property="og:title" content="Keita Yamada"><meta property="og:description" content="Designer and Developer in Japan"><meta property="og:url" content="https://p5aholic.me"><meta property="og:image" content="https://p5aholic.me/assets/share-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="google" content="nositelinkssearchbox"><meta name="google" content="notranslate"><link rel="stylesheet" href="/assets/css/style.css"><link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/favicon.png"><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-6V4D6GVTWB" async=""></script></head><body><div id="Page" data-scroll-target=".content_inner" class="is-dark"><div id="Background"><canvas data-engine="three.js r177" width="1028" height="917" style="width: 1285.31px; height: 1146.56px;"></canvas></div><div class="mask" id="Mask"><div class="mask_top"></div><div class="mask_bottom"></div></div><div class="frame" id="Frame"><div class="frame_line frame_line-left"></div><div class="frame_line frame_line-right"></div><div class="frame_line frame_line-top"></div><div class="frame_line frame_line-bottom"></div></div><div class="theme" id="Theme" x-data=""><div class="theme_colors" @click="$store.app.toggleTheme()"><div class="theme_btn" :class="{ 'is-selected': $store.app.theme === 'light' }"><div class="_box"></div><div class="_text">Light</div></div><div class="theme_btn is-selected" :class="{ 'is-selected': $store.app.theme === 'dark' }"><div class="_box"></div><div class="_text">Dark</div></div></div><div class="theme_btn" :class="{ 'is-selected': $store.app.fontStyle === 'mono' }" @click="$store.app.toggleFontStyle()"><div class="_box"></div><div class="_text">Monospaced</div></div></div><header class="siteHeader" id="SiteHeader"><h1 class="siteHeader_title">Keita Yamada</h1><p class="siteHeader_label">Designer &amp; Developer</p><nav class="siteHeader_nav" x-data=""><ol><li :class="{ 'is-selected': $store.app.currentPath === '/' }" class=""><div class="_dot">●</div><a class="_text" href="/">Home</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/projects/' }" class=""><div class="_dot">●</div><a class="_text" href="/projects/">Projects</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/info/' }" class=""><div class="_dot">●</div><a class="_text" href="/info/">Info</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/contact/' }" class=""><div class="_dot">●</div><a class="_text" href="/contact/">Contact</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/faq/' }" class=""><div class="_dot">●</div><a class="_text" href="/faq/">FAQ</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/copycats/' }" class="is-selected"><div class="_dot">●</div><a class="_text" href="/copycats/">Copycats</a></li></ol></nav></header><div id="Copyright"><p>© Keita Yamada</p></div><main class="content" id="Content"><div class="content_inner" style="transform: translate3d(0px, 0px, 0px);"><section class="page" data-page="home" style="display: none; opacity: 0;"><div class="page_content home"><p class="home_aboutme"><span>Born in 1994</span><span>in Osaka, Japan.</span><span>I believe</span><span>web design</span><span>can be more</span><span>diverse and inspiring.</span><span>With a mission</span><span>to present</span><span>the possibilities</span><span>of web design,</span><span>I am pursuing</span><span>new expressions</span><span>through experiments</span><span>and thoughts.</span></p></div></section><section class="page" data-page="projects" style="display: none; opacity: 0;"><div class="page_content project"><div class="project_list"><div class="project_item"><a class="text-btn" href="https://musinsa.droptokyo.com" target="_blank"><h2 class="project_title trim-cap">MUSINSA STYLE GPS</h2></a><p class="project_info mt-plus">Jun.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://fashionpost.jp/special/coach/" target="_blank"><h2 class="project_title trim-cap">Lilas Ikuta meets COACH</h2></a><p class="project_info mt-plus">April.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://shogotominaga.com" target="_blank"><h2 class="project_title trim-cap">Shogo Tominaga</h2></a><p class="project_info mt-plus">Mar.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://lqve.jp" target="_blank"><h2 class="project_title trim-cap">LQVE</h2></a><p class="project_info">Mar.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://production-hasu.work" target="_blank"><h2 class="project_title trim-cap">PRODUCTION HASU</h2></a><p class="project_info">Oct.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://emuni.co.jp" target="_blank"><h2 class="project_title trim-ex">emuni</h2></a><p class="project_info">Jul.2024 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://under-voyager.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">UNDER VOYAGER</h2></a><p class="project_info">Apr.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://obake.blue/" target="_blank"><h2 class="project_title trim-ex">obake.blue</h2></a><p class="project_info">Feb.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://cocoon-records.info/" target="_blank"><h2 class="project_title trim-ex">cocoon records</h2></a><p class="project_info">Jan.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://midnight-grand-orchestra.jp/starpeggio/" target="_blank"><h2 class="project_title trim-ex">Starpeggio</h2></a><p class="project_info mt-plus">Aug.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://bnn.co.jp" target="_blank"><h2 class="project_title trim-cap">BNN Online Store</h2></a><p class="project_info">Jul.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://ily-girl.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">ILY GIRL</h2></a><p class="project_info">Jul.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://midnight-grand-orchestra.jp/overture-bluray-dvd/" target="_blank"><h2 class="project_title trim-cap">OVERTURE</h2></a><p class="project_info">Mar.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://yansukim.com" target="_blank"><h2 class="project_title trim-cap">yansuKIM</h2></a><p class="project_info">Jan.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://punchred.xyz" target="_blank"><h2 class="project_title trim-cap">PUNCH</h2></a><p class="project_info">Nov.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://solani-illustration.xyz" target="_blank"><h2 class="project_title trim-cap">SOLANI</h2></a><p class="project_info">Nov.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://revenge-pop.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">REVENGE POP</h2></a><p class="project_info">Oct.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://reinakanishi.com" target="_blank"><h2 class="project_title trim-cap">REI NAKANISHI</h2></a><p class="project_info">Jun.2022 / Dev / Design: <a class="text-btn" href="https://okuma.id/" target="_blank">OKUMA</a></p></div><div class="project_item"><a class="text-btn" href="https://holo.punchred.xyz" target="_blank"><h2 class="project_title trim-cap">HOLO.g</h2></a><p class="project_info mt-plus">Dec.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://pan-projects.com" target="_blank"><h2 class="project_title trim-cap">PAN- PROJECTS</h2></a><p class="project_info">Sep.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://vixi-vixi.jp" target="_blank"><h2 class="project_title trim-cap">VIXI</h2></a><p class="project_info">Jun.2021 / Dev / Design: <a class="text-btn" href="https://hydekick.jp/" target="_blank">hydekick</a></p></div><div class="project_item"><a class="text-btn" href="https://yoshikiokamura.art" target="_blank"><h2 class="project_title trim-ex">Yoshiki Okamura</h2></a><p class="project_info">Feb.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://buoy.work" target="_blank"><h2 class="project_title trim-ex">buoy</h2></a><p class="project_info mt-plus">Oct.2020 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://100daysofpoetry.gallery" target="_blank"><h2 class="project_title trim-cap">100 DAYS OF POETRY</h2></a><p class="project_info">May.2020 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://nanameinc.jp" target="_blank"><h2 class="project_title trim-ex">naname</h2></a><p class="project_info">Mar.2020 / Dev / Design: <a class="text-btn" href="https://hydekick.jp/" target="_blank">hydekick</a></p></div></div></div></section><section class="page" data-page="info" style="display: none; opacity: 0;"><div class="page_content info"><div class="info_item info_item-1"><div class="info_content"><ul><li><a class="text-btn" href="https://twitter.com/P5_keita" target="_blank" rel="noopener">X(Twitter) ↗</a></li><li><a class="text-btn" href="https://www.instagram.com/p5aholic/" target="_blank" rel="noopener">Instagram ↗</a></li><li><a class="text-btn" href="https://bsky.app/profile/p5aholic.bsky.social" target="_blank" rel="noopener">Bluesky ↗</a></li></ul></div></div><div class="info_item info_item-2"><div class="info_content"><ul><li><a class="text-btn" href="https://experiments.p5aholic.me" target="_blank" rel="noopener">experiments.p5aholic.me ↗</a></li><li><a class="text-btn" href="https://playground.p5aholic.me" target="_blank" rel="noopener">playground.p5aholic.me ↗</a></li></ul></div></div><div class="info_item info_item-3"><div class="info_content"><ul><li><span class="is-light">Awwwards Independent of the Year<br></span><span>2020 Nominee</span></li><li><span class="is-light">Awwwards Site of the Day<br></span><span>Web Graphic Experiments</span></li><li><span class="is-light">Awwwards Site of the Day<br></span><span>100 DAYS OF POETRY</span></li></ul></div></div></div></section><section class="page" data-page="contact" style="display: none; opacity: 0;"><div class="page_content contact"><div class="contact_wrap"><a class="contact_text jp text-btn" href="https://p5aholic.notion.site/p5aholic/Web-aac658c501b8458080dcc19e5ff26e51" target="_blank" rel="noopener">制作の依頼について ↗</a></div></div></section><section class="page" data-page="faq" style="display: none; opacity: 0;"><div class="page_content faq"><div class="faq_list"><div class="faq_item"><div class="faq_q"><h2>How did you make the background effect in this website?</h2></div><div class="faq_a"><p>I used three.js to write WebGL faster and the background effect is written in glsl.<br>
+If you are interested in glsl, I recommend you to read <a href="https://thebookofshaders.com" target="_blank">The Book of Shaders</a>.</p></div></div><div class="faq_item"><div class="faq_q"><h2>Where can I find your code?</h2></div><div class="faq_a"><p>I have GitHub account but my projects (including this website) are private repository.</p></div></div><div class="faq_item"><div class="faq_q"><h2>Can I use your code?</h2></div><div class="faq_a"><p>I don‘t allow anyone to use my code. I don‘t wanna say such thing but I got too much questions about that.</p></div></div><div class="faq_item"><div class="faq_q"><h2>How did you learn web frontend and WebGL/glsl ?</h2></div><div class="faq_a"><p>By reading books and articles on the internet.<br>
+Here is a list of web pages I recommend to read.<br><br><a href="https://threejs.org/examples/" target="_blank">three.js examples</a><br>
+<a href="https://thebookofshaders.com" target="_blank">The Book of Shaders</a><br>
+<a href="https://threejs-journey.com/" target="_blank">three.js journey</a><br>
+<a href="https://tympanus.net/codrops/?s=three.js&amp;search-type=posts" target="_blank">Codrops</a><br></p></div></div><div class="faq_item"><div class="faq_q"><h2>What libraries do you use?</h2></div><div class="faq_a"><p><a href="https://gsap.com/" target="_blank">GSAP</a> for creating animations.<br>
+<a href="https://threejs.org/" target="_blank">three.js</a> for writing WebGL code.<br>
+<a href="https://tweakpane.github.io/docs/" target="_blank">Tweakpane</a> for tuning parameters.<br>
+<a href="https://alpinejs.dev/" target="_blank">Alpine.js</a> is my favorite JavaScript framework.<br></p></div></div></div></div></section><section class="page" data-page="copycats" style="display: block; opacity: 1;"><div class="page_content faq"><div class="faq_list"><div class="faq_item"><div class="faq_q"><h2>Copycats</h2></div><div class="faq_a"><p>Websites created by plagiarizing the source code of this portfolio site are listed here.<br><br>
+It’s completely normal to feel inspired by someone’s work and want to imitate it, and that’s how I’ve honed my skills as well. What I hate are idiots who just copy the source code and release it as their own.<br><br>
+The links below are to a Google Drive page where evidentiary screenshots were saved. The Names of the website owners are links to their sns account.<br><br>
+If you find any website that has stolen my website’s code, please let me know.(p5aholic923@gmail.com)<br><br>
+<a href="https://drive.google.com/file/d/1pE0s75eaezGUFkm0sFfdMW8vddi1X6I_/view?usp=drive_link" target="_blank">durai69.github.io/Portfolio/</a> by <a href="https://www.linkedin.com/in/durailingam/" target="_blank">Durai Lingam</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1d-EQmbR7YAJCiscgkju2pCpdMO_0kjT4/view?usp=drive_link" target="_blank">web.stanford.edu/~efezldn/</a> by <a href="https://x.com/efezldn" target="_blank">Efe Zaladin</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1EJQM8MccOUm8AIXQ4V61Lt_C7BISRckC/view?usp=drive_link" target="_blank">bkhtdev.com</a> by <a href="https://x.com/thebkht" target="_blank">Bakhtiyor Ganijon</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1lC9yuqaGStO83uAQHGt7k1C83smslXH4/view?usp=drive_link" target="_blank">manosunidas.ar</a> by Gomez Alberto A.
+<br><br>
+<a href="https://drive.google.com/file/d/1JD6GH__-5tIO7hF1VgkYJVg-aJ06cyk-/view?usp=drive_link" target="_blank">huszar-bence.com</a> by <a href="https://github.com/huss4r" target="_blank">Huszár Bence</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1xeYxiTV6KWc_RK-6xijzUF1cAJLFbjXs/view?usp=drive_link" target="_blank">veronicapinar.thepixelperfect.es</a> by <a href="https://www.linkedin.com/in/veronica-pinar/" target="_blank">Verónica Pinar</a></p></div></div></div></div></section></div></main></div><script src="/assets/js/main.js"></script></body></html>
 
-        /* Estilo para el mensaje de carga */
-        .loading-message {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #666;
-            font-size: 16px;
-            z-index: 1;
-        }
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keita Yamada</title><meta name="description" content="Designer and Developer in Japan"><link rel="canonical" href="https://p5aholic.me"><meta property="og:locale" content="ja_JP"><meta property="og:type" content="website"><meta property="og:site_name" content="Keita Yamada"><meta property="og:title" content="Keita Yamada"><meta property="og:description" content="Designer and Developer in Japan"><meta property="og:url" content="https://p5aholic.me"><meta property="og:image" content="https://p5aholic.me/assets/share-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="google" content="nositelinkssearchbox"><meta name="google" content="notranslate"><link rel="stylesheet" href="/assets/css/style.css"><link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/favicon.png"><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-6V4D6GVTWB" async=""></script></head>
 
-        /* Ocultar mensaje de carga cuando el iframe esté listo */
-        .docs-container.loaded .loading-message {
-            display: none;
-        }
+<body><div id="Page" data-scroll-target=".content_inner" class="is-dark"><div id="Background"><canvas data-engine="three.js r177" width="1028" height="917" style="width: 1285.31px; height: 1146.56px;"></canvas></div><div class="mask" id="Mask"><div class="mask_top"></div><div class="mask_bottom"></div></div><div class="frame" id="Frame"><div class="frame_line frame_line-left"></div><div class="frame_line frame_line-right"></div><div class="frame_line frame_line-top"></div><div class="frame_line frame_line-bottom"></div></div><div class="theme" id="Theme" x-data=""><div class="theme_colors" @click="$store.app.toggleTheme()"><div class="theme_btn" :class="{ 'is-selected': $store.app.theme === 'light' }"><div class="_box"></div><div class="_text">Light</div></div><div class="theme_btn is-selected" :class="{ 'is-selected': $store.app.theme === 'dark' }"><div class="_box"></div><div class="_text">Dark</div></div></div><div class="theme_btn" :class="{ 'is-selected': $store.app.fontStyle === 'mono' }" @click="$store.app.toggleFontStyle()"><div class="_box"></div><div class="_text">Monospaced</div></div></div><header class="siteHeader" id="SiteHeader"><h1 class="siteHeader_title">Keita Yamada</h1><p class="siteHeader_label">Designer &amp; Developer</p><nav class="siteHeader_nav" x-data=""><ol><li :class="{ 'is-selected': $store.app.currentPath === '/' }" class=""><div class="_dot">●</div><a class="_text" href="/">Home</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/projects/' }" class=""><div class="_dot">●</div><a class="_text" href="/projects/">Projects</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/info/' }" class=""><div class="_dot">●</div><a class="_text" href="/info/">Info</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/contact/' }" class=""><div class="_dot">●</div><a class="_text" href="/contact/">Contact</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/faq/' }" class=""><div class="_dot">●</div><a class="_text" href="/faq/">FAQ</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/copycats/' }" class="is-selected"><div class="_dot">●</div><a class="_text" href="/copycats/">Copycats</a></li></ol></nav></header><div id="Copyright"><p>© Keita Yamada</p></div><main class="content" id="Content"><div class="content_inner" style="transform: translate3d(0px, 0px, 0px);"><section class="page" data-page="home" style="display: none; opacity: 0;"><div class="page_content home"><p class="home_aboutme"><span>Born in 1994</span><span>in Osaka, Japan.</span><span>I believe</span><span>web design</span><span>can be more</span><span>diverse and inspiring.</span><span>With a mission</span><span>to present</span><span>the possibilities</span><span>of web design,</span><span>I am pursuing</span><span>new expressions</span><span>through experiments</span><span>and thoughts.</span></p></div></section><section class="page" data-page="projects" style="display: none; opacity: 0;"><div class="page_content project"><div class="project_list"><div class="project_item"><a class="text-btn" href="https://musinsa.droptokyo.com" target="_blank"><h2 class="project_title trim-cap">MUSINSA STYLE GPS</h2></a><p class="project_info mt-plus">Jun.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://fashionpost.jp/special/coach/" target="_blank"><h2 class="project_title trim-cap">Lilas Ikuta meets COACH</h2></a><p class="project_info mt-plus">April.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://shogotominaga.com" target="_blank"><h2 class="project_title trim-cap">Shogo Tominaga</h2></a><p class="project_info mt-plus">Mar.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://lqve.jp" target="_blank"><h2 class="project_title trim-cap">LQVE</h2></a><p class="project_info">Mar.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://production-hasu.work" target="_blank"><h2 class="project_title trim-cap">PRODUCTION HASU</h2></a><p class="project_info">Oct.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://emuni.co.jp" target="_blank"><h2 class="project_title trim-ex">emuni</h2></a><p class="project_info">Jul.2024 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://under-voyager.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">UNDER VOYAGER</h2></a><p class="project_info">Apr.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://obake.blue/" target="_blank"><h2 class="project_title trim-ex">obake.blue</h2></a><p class="project_info">Feb.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://cocoon-records.info/" target="_blank"><h2 class="project_title trim-ex">cocoon records</h2></a><p class="project_info">Jan.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://midnight-grand-orchestra.jp/starpeggio/" target="_blank"><h2 class="project_title trim-ex">Starpeggio</h2></a><p class="project_info mt-plus">Aug.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://bnn.co.jp" target="_blank"><h2 class="project_title trim-cap">BNN Online Store</h2></a><p class="project_info">Jul.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://ily-girl.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">ILY GIRL</h2></a><p class="project_info">Jul.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://midnight-grand-orchestra.jp/overture-bluray-dvd/" target="_blank"><h2 class="project_title trim-cap">OVERTURE</h2></a><p class="project_info">Mar.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://yansukim.com" target="_blank"><h2 class="project_title trim-cap">yansuKIM</h2></a><p class="project_info">Jan.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://punchred.xyz" target="_blank"><h2 class="project_title trim-cap">PUNCH</h2></a><p class="project_info">Nov.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://solani-illustration.xyz" target="_blank"><h2 class="project_title trim-cap">SOLANI</h2></a><p class="project_info">Nov.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://revenge-pop.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">REVENGE POP</h2></a><p class="project_info">Oct.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://reinakanishi.com" target="_blank"><h2 class="project_title trim-cap">REI NAKANISHI</h2></a><p class="project_info">Jun.2022 / Dev / Design: <a class="text-btn" href="https://okuma.id/" target="_blank">OKUMA</a></p></div><div class="project_item"><a class="text-btn" href="https://holo.punchred.xyz" target="_blank"><h2 class="project_title trim-cap">HOLO.g</h2></a><p class="project_info mt-plus">Dec.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://pan-projects.com" target="_blank"><h2 class="project_title trim-cap">PAN- PROJECTS</h2></a><p class="project_info">Sep.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://vixi-vixi.jp" target="_blank"><h2 class="project_title trim-cap">VIXI</h2></a><p class="project_info">Jun.2021 / Dev / Design: <a class="text-btn" href="https://hydekick.jp/" target="_blank">hydekick</a></p></div><div class="project_item"><a class="text-btn" href="https://yoshikiokamura.art" target="_blank"><h2 class="project_title trim-ex">Yoshiki Okamura</h2></a><p class="project_info">Feb.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://buoy.work" target="_blank"><h2 class="project_title trim-ex">buoy</h2></a><p class="project_info mt-plus">Oct.2020 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://100daysofpoetry.gallery" target="_blank"><h2 class="project_title trim-cap">100 DAYS OF POETRY</h2></a><p class="project_info">May.2020 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://nanameinc.jp" target="_blank"><h2 class="project_title trim-ex">naname</h2></a><p class="project_info">Mar.2020 / Dev / Design: <a class="text-btn" href="https://hydekick.jp/" target="_blank">hydekick</a></p></div></div></div></section><section class="page" data-page="info" style="display: none; opacity: 0;"><div class="page_content info"><div class="info_item info_item-1"><div class="info_content"><ul><li><a class="text-btn" href="https://twitter.com/P5_keita" target="_blank" rel="noopener">X(Twitter) ↗</a></li><li><a class="text-btn" href="https://www.instagram.com/p5aholic/" target="_blank" rel="noopener">Instagram ↗</a></li><li><a class="text-btn" href="https://bsky.app/profile/p5aholic.bsky.social" target="_blank" rel="noopener">Bluesky ↗</a></li></ul></div></div><div class="info_item info_item-2"><div class="info_content"><ul><li><a class="text-btn" href="https://experiments.p5aholic.me" target="_blank" rel="noopener">experiments.p5aholic.me ↗</a></li><li><a class="text-btn" href="https://playground.p5aholic.me" target="_blank" rel="noopener">playground.p5aholic.me ↗</a></li></ul></div></div><div class="info_item info_item-3"><div class="info_content"><ul><li><span class="is-light">Awwwards Independent of the Year<br></span><span>2020 Nominee</span></li><li><span class="is-light">Awwwards Site of the Day<br></span><span>Web Graphic Experiments</span></li><li><span class="is-light">Awwwards Site of the Day<br></span><span>100 DAYS OF POETRY</span></li></ul></div></div></div></section><section class="page" data-page="contact" style="display: none; opacity: 0;"><div class="page_content contact"><div class="contact_wrap"><a class="contact_text jp text-btn" href="https://p5aholic.notion.site/p5aholic/Web-aac658c501b8458080dcc19e5ff26e51" target="_blank" rel="noopener">制作の依頼について ↗</a></div></div></section><section class="page" data-page="faq" style="display: none; opacity: 0;"><div class="page_content faq"><div class="faq_list"><div class="faq_item"><div class="faq_q"><h2>How did you make the background effect in this website?</h2></div><div class="faq_a"><p>I used three.js to write WebGL faster and the background effect is written in glsl.<br>
+If you are interested in glsl, I recommend you to read <a href="https://thebookofshaders.com" target="_blank">The Book of Shaders</a>.</p></div></div><div class="faq_item"><div class="faq_q"><h2>Where can I find your code?</h2></div><div class="faq_a"><p>I have GitHub account but my projects (including this website) are private repository.</p></div></div><div class="faq_item"><div class="faq_q"><h2>Can I use your code?</h2></div><div class="faq_a"><p>I don‘t allow anyone to use my code. I don‘t wanna say such thing but I got too much questions about that.</p></div></div><div class="faq_item"><div class="faq_q"><h2>How did you learn web frontend and WebGL/glsl ?</h2></div><div class="faq_a"><p>By reading books and articles on the internet.<br>
+Here is a list of web pages I recommend to read.<br><br><a href="https://threejs.org/examples/" target="_blank">three.js examples</a><br>
+<a href="https://thebookofshaders.com" target="_blank">The Book of Shaders</a><br>
+<a href="https://threejs-journey.com/" target="_blank">three.js journey</a><br>
+<a href="https://tympanus.net/codrops/?s=three.js&amp;search-type=posts" target="_blank">Codrops</a><br></p></div></div><div class="faq_item"><div class="faq_q"><h2>What libraries do you use?</h2></div><div class="faq_a"><p><a href="https://gsap.com/" target="_blank">GSAP</a> for creating animations.<br>
+<a href="https://threejs.org/" target="_blank">three.js</a> for writing WebGL code.<br>
+<a href="https://tweakpane.github.io/docs/" target="_blank">Tweakpane</a> for tuning parameters.<br>
+<a href="https://alpinejs.dev/" target="_blank">Alpine.js</a> is my favorite JavaScript framework.<br></p></div></div></div></div></section><section class="page" data-page="copycats" style="display: block; opacity: 1;"><div class="page_content faq"><div class="faq_list"><div class="faq_item"><div class="faq_q"><h2>Copycats</h2></div><div class="faq_a"><p>Websites created by plagiarizing the source code of this portfolio site are listed here.<br><br>
+It’s completely normal to feel inspired by someone’s work and want to imitate it, and that’s how I’ve honed my skills as well. What I hate are idiots who just copy the source code and release it as their own.<br><br>
+The links below are to a Google Drive page where evidentiary screenshots were saved. The Names of the website owners are links to their sns account.<br><br>
+If you find any website that has stolen my website’s code, please let me know.(p5aholic923@gmail.com)<br><br>
+<a href="https://drive.google.com/file/d/1pE0s75eaezGUFkm0sFfdMW8vddi1X6I_/view?usp=drive_link" target="_blank">durai69.github.io/Portfolio/</a> by <a href="https://www.linkedin.com/in/durailingam/" target="_blank">Durai Lingam</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1d-EQmbR7YAJCiscgkju2pCpdMO_0kjT4/view?usp=drive_link" target="_blank">web.stanford.edu/~efezldn/</a> by <a href="https://x.com/efezldn" target="_blank">Efe Zaladin</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1EJQM8MccOUm8AIXQ4V61Lt_C7BISRckC/view?usp=drive_link" target="_blank">bkhtdev.com</a> by <a href="https://x.com/thebkht" target="_blank">Bakhtiyor Ganijon</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1lC9yuqaGStO83uAQHGt7k1C83smslXH4/view?usp=drive_link" target="_blank">manosunidas.ar</a> by Gomez Alberto A.
+<br><br>
+<a href="https://drive.google.com/file/d/1JD6GH__-5tIO7hF1VgkYJVg-aJ06cyk-/view?usp=drive_link" target="_blank">huszar-bence.com</a> by <a href="https://github.com/huss4r" target="_blank">Huszár Bence</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1xeYxiTV6KWc_RK-6xijzUF1cAJLFbjXs/view?usp=drive_link" target="_blank">veronicapinar.thepixelperfect.es</a> by <a href="https://www.linkedin.com/in/veronica-pinar/" target="_blank">Verónica Pinar</a></p></div></div></div></div></section></div></main></div><script src="/assets/js/main.js"></script></body>
 
-        /* Estilo para el mensaje de error */
-        .error-message {
-            padding: 40px;
-            text-align: center;
-            font-size: 18px;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: transparent;
-            color: #333;
-        }
-
-        .error-message .icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .error-message a {
-            color: #1976d2;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: 2px solid #1976d2;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .error-message a:hover {
-            background-color: #1976d2;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <!-- Contenedor principal que ocupa toda la pantalla -->
-    <div class="docs-container" id="docsContainer">
-        <!-- Mensaje de carga -->
-        <div class="loading-message">
-            <p>📄 Cargando documentos...</p>
-        </div>
-        
-        <!-- Wrapper adicional para centrar mejor -->
-        <div class="iframe-wrapper">
-            <!-- 
-            Iframe que muestra la carpeta de Google Drive
-            Intentando diferentes vistas para mejor centrado
-            -->
-            <iframe 
-                id="docsViewer"
-                src="https://drive.google.com/embeddedfolderview?id=1ptrdx4L_H5QYB1RuCw_dGiO-9RrEebtz#grid" 
-                class="docs-viewer"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-    <script>
-        // Script para manejo de carga y centrado
-        window.addEventListener('load', function() {
-            console.log('Visor de documentos iniciado');
-            
-            const container = document.getElementById('docsContainer');
-            const iframe = document.getElementById('docsViewer');
-            
-            // Función para alternar entre diferentes vistas de Drive
-            function tryDifferentViews() {
-                // Mantener solo la vista grid que es la que quieres
-                const gridUrl = 'https://drive.google.com/embeddedfolderview?id=1ptrdx4L_H5QYB1RuCw_dGiO-9RrEebtz#grid';
-                iframe.src = gridUrl;
-                console.log('Forzando vista grid/iconos');
-            }
-            
-            // Función para manejar la carga exitosa
-            function handleLoadSuccess() {
-                console.log('Documentos cargados exitosamente');
-                container.classList.add('loaded');
-                
-                // CSS para que los documentos se distribuyan desde el centro
-                setTimeout(() => {
-                    try {
-                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                        if (iframeDoc) {
-                            const style = iframeDoc.createElement('style');
-                            style.textContent = `
-                                /* Hacer que el contenedor principal use justify-content: center */
-                                .a-s-B, .a-s-B-r, [data-target="drive"] { 
-                                    display: flex !important; 
-                                    justify-content: center !important; 
-                                    flex-wrap: wrap !important;
-                                    align-content: center !important;
-                                }
-                                
-                                /* La grilla de archivos debe comenzar desde el centro */
-                                .drive-viewer-folderGrid, .a-s-B-Ha-oa {
-                                    display: flex !important;
-                                    justify-content: center !important;
-                                    flex-wrap: wrap !important;
-                                    align-items: flex-start !important;
-                                    gap: 16px !important;
-                                    max-width: 100% !important;
-                                    margin: 0 auto !important;
-                                }
-                                
-                                /* Cada documento individual se coloca naturalmente */
-                                .a-s-B-Ha-oa > div, .a-s-B-Ha-oa .a-s-B-Ha-Lc {
-                                    flex: none !important;
-                                    margin: 8px !important;
-                                }
-                                
-                                /* Centrar el contenedor padre */
-                                body, .a-s-A {
-                                    display: flex !important;
-                                    justify-content: center !important;
-                                    align-items: flex-start !important;
-                                    padding-top: 50px !important;
-                                }
-                            `;
-                            iframeDoc.head.appendChild(style);
-                            console.log('CSS aplicado: documentos se distribuyen desde el centro');
-                        }
-                    } catch (e) {
-                        console.log('No se puede modificar el CSS interno (CORS) - esto es normal');
-                    }
-                }, 2000);
-            }
-            
-            // Función para manejar errores de carga
-            function handleLoadError() {
-                console.log('Error: No se pudo cargar la carpeta de Drive');
-                
-                // Reemplazar el contenido con mensaje de error
-                document.body.innerHTML = `
-                    <div class="error-message">
-                        <div class="icon">⚠️</div>
-                        <h2>No se pudo cargar la vista de documentos</h2>
-                        <p>Verifica tu conexión a internet o intenta más tarde</p>
-                        <a href="https://drive.google.com/drive/folders/1ptrdx4L_H5QYB1RuCw_dGiO-9RrEebtz?usp=sharing" target="_blank">
-                            Abrir carpeta en Google Drive
-                        </a>
-                    </div>
-                `;
-            }
-            
-            // Detectar cuando el iframe se ha cargado
-            iframe.addEventListener('load', function() {
-                setTimeout(handleLoadSuccess, 1000); // Dar tiempo para que se cargue completamente
-            });
-            
-            // Detectar errores de carga
-            iframe.addEventListener('error', handleLoadError);
-            
-            // Timeout como respaldo si no se detecta la carga
-            setTimeout(function() {
-                if (!container.classList.contains('loaded')) {
-                    // Verificar si el iframe está presente y responde
-                    if (iframe.src && iframe.offsetHeight > 0) {
-                        handleLoadSuccess(); // Si el iframe tiene contenido, asumir éxito
-                    } else {
-                        handleLoadError();
-                    }
-                }
-            }, 8000); // 8 segundos timeout
-            
-            // Mantener centrado al redimensionar
-            window.addEventListener('resize', function() {
-                console.log('Ventana redimensionada - manteniendo centrado');
-            });
-        });
-        
-        // Función para reintentar carga si es necesario
-        function retryLoad() {
-            location.reload();
-        }
-        
-        // Detectar clic en el iframe para analytics básico
-        window.addEventListener('message', function(event) {
-            if (event.origin === 'https://drive.google.com') {
-                console.log('Interacción detectada con Google Drive');
-            }
-        });
-    </script>
-</body>
-</html>
+<html lang="ja" style="--c-bg: hsl(0, 0%, 5%); --c-text: hsl(0, 0%, 95%); --vw: 13.85px; --vh: 12.46px; --vmax: 13.85px; --vmin: 12.46px;"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keita Yamada</title><meta name="description" content="Designer and Developer in Japan"><link rel="canonical" href="https://p5aholic.me"><meta property="og:locale" content="ja_JP"><meta property="og:type" content="website"><meta property="og:site_name" content="Keita Yamada"><meta property="og:title" content="Keita Yamada"><meta property="og:description" content="Designer and Developer in Japan"><meta property="og:url" content="https://p5aholic.me"><meta property="og:image" content="https://p5aholic.me/assets/share-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="google" content="nositelinkssearchbox"><meta name="google" content="notranslate"><link rel="stylesheet" href="/assets/css/style.css"><link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/favicon.png"><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-6V4D6GVTWB" async=""></script></head><body><div id="Page" data-scroll-target=".content_inner" class="is-dark"><div id="Background"><canvas data-engine="three.js r177" width="1028" height="917" style="width: 1285.31px; height: 1146.56px;"></canvas></div><div class="mask" id="Mask"><div class="mask_top"></div><div class="mask_bottom"></div></div><div class="frame" id="Frame"><div class="frame_line frame_line-left"></div><div class="frame_line frame_line-right"></div><div class="frame_line frame_line-top"></div><div class="frame_line frame_line-bottom"></div></div><div class="theme" id="Theme" x-data=""><div class="theme_colors" @click="$store.app.toggleTheme()"><div class="theme_btn" :class="{ 'is-selected': $store.app.theme === 'light' }"><div class="_box"></div><div class="_text">Light</div></div><div class="theme_btn is-selected" :class="{ 'is-selected': $store.app.theme === 'dark' }"><div class="_box"></div><div class="_text">Dark</div></div></div><div class="theme_btn" :class="{ 'is-selected': $store.app.fontStyle === 'mono' }" @click="$store.app.toggleFontStyle()"><div class="_box"></div><div class="_text">Monospaced</div></div></div><header class="siteHeader" id="SiteHeader"><h1 class="siteHeader_title">Keita Yamada</h1><p class="siteHeader_label">Designer &amp; Developer</p><nav class="siteHeader_nav" x-data=""><ol><li :class="{ 'is-selected': $store.app.currentPath === '/' }" class=""><div class="_dot">●</div><a class="_text" href="/">Home</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/projects/' }" class=""><div class="_dot">●</div><a class="_text" href="/projects/">Projects</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/info/' }" class=""><div class="_dot">●</div><a class="_text" href="/info/">Info</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/contact/' }" class=""><div class="_dot">●</div><a class="_text" href="/contact/">Contact</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/faq/' }" class=""><div class="_dot">●</div><a class="_text" href="/faq/">FAQ</a></li><li :class="{ 'is-selected': $store.app.currentPath === '/copycats/' }" class="is-selected"><div class="_dot">●</div><a class="_text" href="/copycats/">Copycats</a></li></ol></nav></header><div id="Copyright"><p>© Keita Yamada</p></div><main class="content" id="Content"><div class="content_inner" style="transform: translate3d(0px, 0px, 0px);"><section class="page" data-page="home" style="display: none; opacity: 0;"><div class="page_content home"><p class="home_aboutme"><span>Born in 1994</span><span>in Osaka, Japan.</span><span>I believe</span><span>web design</span><span>can be more</span><span>diverse and inspiring.</span><span>With a mission</span><span>to present</span><span>the possibilities</span><span>of web design,</span><span>I am pursuing</span><span>new expressions</span><span>through experiments</span><span>and thoughts.</span></p></div></section><section class="page" data-page="projects" style="display: none; opacity: 0;"><div class="page_content project"><div class="project_list"><div class="project_item"><a class="text-btn" href="https://musinsa.droptokyo.com" target="_blank"><h2 class="project_title trim-cap">MUSINSA STYLE GPS</h2></a><p class="project_info mt-plus">Jun.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://fashionpost.jp/special/coach/" target="_blank"><h2 class="project_title trim-cap">Lilas Ikuta meets COACH</h2></a><p class="project_info mt-plus">April.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://shogotominaga.com" target="_blank"><h2 class="project_title trim-cap">Shogo Tominaga</h2></a><p class="project_info mt-plus">Mar.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://lqve.jp" target="_blank"><h2 class="project_title trim-cap">LQVE</h2></a><p class="project_info">Mar.2025 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://production-hasu.work" target="_blank"><h2 class="project_title trim-cap">PRODUCTION HASU</h2></a><p class="project_info">Oct.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://emuni.co.jp" target="_blank"><h2 class="project_title trim-ex">emuni</h2></a><p class="project_info">Jul.2024 / Dev / Design: <a class="text-btn" href="https://x.com/HiroakiNakano" target="_blank">Hiroaki Nakano</a></p></div><div class="project_item"><a class="text-btn" href="https://under-voyager.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">UNDER VOYAGER</h2></a><p class="project_info">Apr.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://obake.blue/" target="_blank"><h2 class="project_title trim-ex">obake.blue</h2></a><p class="project_info">Feb.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://cocoon-records.info/" target="_blank"><h2 class="project_title trim-ex">cocoon records</h2></a><p class="project_info">Jan.2024 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://midnight-grand-orchestra.jp/starpeggio/" target="_blank"><h2 class="project_title trim-ex">Starpeggio</h2></a><p class="project_info mt-plus">Aug.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://bnn.co.jp" target="_blank"><h2 class="project_title trim-cap">BNN Online Store</h2></a><p class="project_info">Jul.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://ily-girl.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">ILY GIRL</h2></a><p class="project_info">Jul.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://midnight-grand-orchestra.jp/overture-bluray-dvd/" target="_blank"><h2 class="project_title trim-cap">OVERTURE</h2></a><p class="project_info">Mar.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://yansukim.com" target="_blank"><h2 class="project_title trim-cap">yansuKIM</h2></a><p class="project_info">Jan.2023 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://punchred.xyz" target="_blank"><h2 class="project_title trim-cap">PUNCH</h2></a><p class="project_info">Nov.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://solani-illustration.xyz" target="_blank"><h2 class="project_title trim-cap">SOLANI</h2></a><p class="project_info">Nov.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://revenge-pop.mikapikazo.info" target="_blank"><h2 class="project_title trim-cap">REVENGE POP</h2></a><p class="project_info">Oct.2022 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://reinakanishi.com" target="_blank"><h2 class="project_title trim-cap">REI NAKANISHI</h2></a><p class="project_info">Jun.2022 / Dev / Design: <a class="text-btn" href="https://okuma.id/" target="_blank">OKUMA</a></p></div><div class="project_item"><a class="text-btn" href="https://holo.punchred.xyz" target="_blank"><h2 class="project_title trim-cap">HOLO.g</h2></a><p class="project_info mt-plus">Dec.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://pan-projects.com" target="_blank"><h2 class="project_title trim-cap">PAN- PROJECTS</h2></a><p class="project_info">Sep.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://vixi-vixi.jp" target="_blank"><h2 class="project_title trim-cap">VIXI</h2></a><p class="project_info">Jun.2021 / Dev / Design: <a class="text-btn" href="https://hydekick.jp/" target="_blank">hydekick</a></p></div><div class="project_item"><a class="text-btn" href="https://yoshikiokamura.art" target="_blank"><h2 class="project_title trim-ex">Yoshiki Okamura</h2></a><p class="project_info">Feb.2021 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://buoy.work" target="_blank"><h2 class="project_title trim-ex">buoy</h2></a><p class="project_info mt-plus">Oct.2020 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://100daysofpoetry.gallery" target="_blank"><h2 class="project_title trim-cap">100 DAYS OF POETRY</h2></a><p class="project_info">May.2020 / Design &amp; Dev</p></div><div class="project_item"><a class="text-btn" href="https://nanameinc.jp" target="_blank"><h2 class="project_title trim-ex">naname</h2></a><p class="project_info">Mar.2020 / Dev / Design: <a class="text-btn" href="https://hydekick.jp/" target="_blank">hydekick</a></p></div></div></div></section><section class="page" data-page="info" style="display: none; opacity: 0;"><div class="page_content info"><div class="info_item info_item-1"><div class="info_content"><ul><li><a class="text-btn" href="https://twitter.com/P5_keita" target="_blank" rel="noopener">X(Twitter) ↗</a></li><li><a class="text-btn" href="https://www.instagram.com/p5aholic/" target="_blank" rel="noopener">Instagram ↗</a></li><li><a class="text-btn" href="https://bsky.app/profile/p5aholic.bsky.social" target="_blank" rel="noopener">Bluesky ↗</a></li></ul></div></div><div class="info_item info_item-2"><div class="info_content"><ul><li><a class="text-btn" href="https://experiments.p5aholic.me" target="_blank" rel="noopener">experiments.p5aholic.me ↗</a></li><li><a class="text-btn" href="https://playground.p5aholic.me" target="_blank" rel="noopener">playground.p5aholic.me ↗</a></li></ul></div></div><div class="info_item info_item-3"><div class="info_content"><ul><li><span class="is-light">Awwwards Independent of the Year<br></span><span>2020 Nominee</span></li><li><span class="is-light">Awwwards Site of the Day<br></span><span>Web Graphic Experiments</span></li><li><span class="is-light">Awwwards Site of the Day<br></span><span>100 DAYS OF POETRY</span></li></ul></div></div></div></section><section class="page" data-page="contact" style="display: none; opacity: 0;"><div class="page_content contact"><div class="contact_wrap"><a class="contact_text jp text-btn" href="https://p5aholic.notion.site/p5aholic/Web-aac658c501b8458080dcc19e5ff26e51" target="_blank" rel="noopener">制作の依頼について ↗</a></div></div></section><section class="page" data-page="faq" style="display: none; opacity: 0;"><div class="page_content faq"><div class="faq_list"><div class="faq_item"><div class="faq_q"><h2>How did you make the background effect in this website?</h2></div><div class="faq_a"><p>I used three.js to write WebGL faster and the background effect is written in glsl.<br>
+If you are interested in glsl, I recommend you to read <a href="https://thebookofshaders.com" target="_blank">The Book of Shaders</a>.</p></div></div><div class="faq_item"><div class="faq_q"><h2>Where can I find your code?</h2></div><div class="faq_a"><p>I have GitHub account but my projects (including this website) are private repository.</p></div></div><div class="faq_item"><div class="faq_q"><h2>Can I use your code?</h2></div><div class="faq_a"><p>I don‘t allow anyone to use my code. I don‘t wanna say such thing but I got too much questions about that.</p></div></div><div class="faq_item"><div class="faq_q"><h2>How did you learn web frontend and WebGL/glsl ?</h2></div><div class="faq_a"><p>By reading books and articles on the internet.<br>
+Here is a list of web pages I recommend to read.<br><br><a href="https://threejs.org/examples/" target="_blank">three.js examples</a><br>
+<a href="https://thebookofshaders.com" target="_blank">The Book of Shaders</a><br>
+<a href="https://threejs-journey.com/" target="_blank">three.js journey</a><br>
+<a href="https://tympanus.net/codrops/?s=three.js&amp;search-type=posts" target="_blank">Codrops</a><br></p></div></div><div class="faq_item"><div class="faq_q"><h2>What libraries do you use?</h2></div><div class="faq_a"><p><a href="https://gsap.com/" target="_blank">GSAP</a> for creating animations.<br>
+<a href="https://threejs.org/" target="_blank">three.js</a> for writing WebGL code.<br>
+<a href="https://tweakpane.github.io/docs/" target="_blank">Tweakpane</a> for tuning parameters.<br>
+<a href="https://alpinejs.dev/" target="_blank">Alpine.js</a> is my favorite JavaScript framework.<br></p></div></div></div></div></section><section class="page" data-page="copycats" style="display: block; opacity: 1;"><div class="page_content faq"><div class="faq_list"><div class="faq_item"><div class="faq_q"><h2>Copycats</h2></div><div class="faq_a"><p>Websites created by plagiarizing the source code of this portfolio site are listed here.<br><br>
+It’s completely normal to feel inspired by someone’s work and want to imitate it, and that’s how I’ve honed my skills as well. What I hate are idiots who just copy the source code and release it as their own.<br><br>
+The links below are to a Google Drive page where evidentiary screenshots were saved. The Names of the website owners are links to their sns account.<br><br>
+If you find any website that has stolen my website’s code, please let me know.(p5aholic923@gmail.com)<br><br>
+<a href="https://drive.google.com/file/d/1pE0s75eaezGUFkm0sFfdMW8vddi1X6I_/view?usp=drive_link" target="_blank">durai69.github.io/Portfolio/</a> by <a href="https://www.linkedin.com/in/durailingam/" target="_blank">Durai Lingam</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1d-EQmbR7YAJCiscgkju2pCpdMO_0kjT4/view?usp=drive_link" target="_blank">web.stanford.edu/~efezldn/</a> by <a href="https://x.com/efezldn" target="_blank">Efe Zaladin</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1EJQM8MccOUm8AIXQ4V61Lt_C7BISRckC/view?usp=drive_link" target="_blank">bkhtdev.com</a> by <a href="https://x.com/thebkht" target="_blank">Bakhtiyor Ganijon</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1lC9yuqaGStO83uAQHGt7k1C83smslXH4/view?usp=drive_link" target="_blank">manosunidas.ar</a> by Gomez Alberto A.
+<br><br>
+<a href="https://drive.google.com/file/d/1JD6GH__-5tIO7hF1VgkYJVg-aJ06cyk-/view?usp=drive_link" target="_blank">huszar-bence.com</a> by <a href="https://github.com/huss4r" target="_blank">Huszár Bence</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1xeYxiTV6KWc_RK-6xijzUF1cAJLFbjXs/view?usp=drive_link" target="_blank">veronicapinar.thepixelperfect.es</a> by <a href="https://www.linkedin.com/in/veronica-pinar/" target="_blank">Verónica Pinar</a></p></div></div></div></div></section></div></main></div><script src="/assets/js/main.js"></script></body></html>
