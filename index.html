@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos</title>
+    <style>
+        /* Resetear márgenes y padding del body para aprovechar todo el espacio */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        /* Contenedor principal que ocupa toda la pantalla */
+        .docs-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background-color: transparent;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Iframe del visor de documentos - perfectamente centrado */
+        .docs-viewer {
+            width: 90vw;
+            height: 90vh;
+            border: none;
+            display: block;
+            background-color: transparent;
+            margin: 0 auto;
+        }
+        
+        /* Contenedor adicional para centrar mejor el iframe */
+        .iframe-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Responsive para tablets */
+        @media (max-width: 768px) {
+            .docs-viewer {
+                width: 95vw;
+                height: 95vh;
+            }
+        }
+        
+        /* Responsive para móviles */
+        @media (max-width: 480px) {
+            .docs-viewer {
+                width: 98vw;
+                height: 98vh;
+            }
+        }
+        
+        /* Asegurar que no haya scroll en el contenedor padre */
+        html {
+            overflow: hidden;
+            height: 100%;
+            background-color: transparent;
+        }
+
+        /* Estilo para el mensaje de carga */
+        .loading-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            z-index: 1;
+        }
+
+        /* Ocultar mensaje de carga cuando el iframe esté listo */
+        .docs-container.loaded .loading-message {
+            display: none;
+        }
+
+        /* Estilo para el mensaje de error */
+        .error-message {
+            padding: 40px;
+            text-align: center;
+            font-size: 18px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            color: #333;
+        }
+
+        .error-message .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .error-message a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 2px solid #1976d2;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .error-message a:hover {
+            background-color: #1976d2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal que ocupa toda la pantalla -->
+    <div class="docs-container" id="docsContainer">
+        <!-- Mensaje de carga -->
+        <div class="loading-message">
+            <p>📄 Cargando documentos...</p>
+        </div>
+        
+        <!-- Wrapper adicional para centrar mejor -->
+        <div class="iframe-wrapper">
+            <!-- 
+            Iframe que muestra la carpeta de Google Drive
+            Intentando diferentes vistas para mejor centrado
+            -->
+            <iframe 
+                id="docsViewer"
+                src="https://drive.google.com/embeddedfolderview?id=1ptrdx4L_H5QYB1RuCw_dGiO-9RrEebtz#grid" 
+                class="docs-viewer"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        // Script para manejo de carga y centrado
+        window.addEventListener('load', function() {
+            console.log('Visor de documentos iniciado');
+            
+            const container = document.getElementById('docsContainer');
+            const iframe = document.getElementById('docsViewer');
+            
+            // Función para alternar entre diferentes vistas de Drive
+            function tryDifferentViews() {
+                // Mantener solo la vista grid que es la que quieres
+                const gridUrl = 'https://drive.google.com/embeddedfolderview?id=1ptrdx4L_H5QYB1RuCw_dGiO-9RrEebtz#grid';
+                iframe.src = gridUrl;
+                console.log('Forzando vista grid/iconos');
+            }
+            
+            // Función para manejar la carga exitosa
+            function handleLoadSuccess() {
+                console.log('Documentos cargados exitosamente');
+                container.classList.add('loaded');
+                
+                // CSS para que los documentos se distribuyan desde el centro
+                setTimeout(() => {
+                    try {
+                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        if (iframeDoc) {
+                            const style = iframeDoc.createElement('style');
+                            style.textContent = `
+                                /* Hacer que el contenedor principal use justify-content: center */
+                                .a-s-B, .a-s-B-r, [data-target="drive"] { 
+                                    display: flex !important; 
+                                    justify-content: center !important; 
+                                    flex-wrap: wrap !important;
+                                    align-content: center !important;
+                                }
+                                
+                                /* La grilla de archivos debe comenzar desde el centro */
+                                .drive-viewer-folderGrid, .a-s-B-Ha-oa {
+                                    display: flex !important;
+                                    justify-content: center !important;
+                                    flex-wrap: wrap !important;
+                                    align-items: flex-start !important;
+                                    gap: 16px !important;
+                                    max-width: 100% !important;
+                                    margin: 0 auto !important;
+                                }
+                                
+                                /* Cada documento individual se coloca naturalmente */
+                                .a-s-B-Ha-oa > div, .a-s-B-Ha-oa .a-s-B-Ha-Lc {
+                                    flex: none !important;
+                                    margin: 8px !important;
+                                }
+                                
+                                /* Centrar el contenedor padre */
+                                body, .a-s-A {
+                                    display: flex !important;
+                                    justify-content: center !important;
+                                    align-items: flex-start !important;
+                                    padding-top: 50px !important;
+                                }
+                            `;
+                            iframeDoc.head.appendChild(style);
+                            console.log('CSS aplicado: documentos se distribuyen desde el centro');
+                        }
+                    } catch (e) {
+                        console.log('No se puede modificar el CSS interno (CORS) - esto es normal');
+                    }
+                }, 2000);
+            }
+            
+            // Función para manejar errores de carga
+            function handleLoadError() {
+                console.log('Error: No se pudo cargar la carpeta de Drive');
+                
+                // Reemplazar el contenido con mensaje de error
+                document.body.innerHTML = `
+                    <div class="error-message">
+                        <div class="icon">⚠️</div>
+                        <h2>No se pudo cargar la vista de documentos</h2>
+                        <p>Verifica tu conexión a internet o intenta más tarde</p>
+                        <a href="https://drive.google.com/drive/folders/1ptrdx4L_H5QYB1RuCw_dGiO-9RrEebtz?usp=sharing" target="_blank">
+                            Abrir carpeta en Google Drive
+                        </a>
+                    </div>
+                `;
+            }
+            
+            // Detectar cuando el iframe se ha cargado
+            iframe.addEventListener('load', function() {
+                setTimeout(handleLoadSuccess, 1000); // Dar tiempo para que se cargue completamente
+            });
+            
+            // Detectar errores de carga
+            iframe.addEventListener('error', handleLoadError);
+            
+            // Timeout como respaldo si no se detecta la carga
+            setTimeout(function() {
+                if (!container.classList.contains('loaded')) {
+                    // Verificar si el iframe está presente y responde
+                    if (iframe.src && iframe.offsetHeight > 0) {
+                        handleLoadSuccess(); // Si el iframe tiene contenido, asumir éxito
+                    } else {
+                        handleLoadError();
+                    }
+                }
+            }, 8000); // 8 segundos timeout
+            
+            // Mantener centrado al redimensionar
+            window.addEventListener('resize', function() {
+                console.log('Ventana redimensionada - manteniendo centrado');
+            });
+        });
+        
+        // Función para reintentar carga si es necesario
+        function retryLoad() {
+            location.reload();
+        }
+        
+        // Detectar clic en el iframe para analytics básico
+        window.addEventListener('message', function(event) {
+            if (event.origin === 'https://drive.google.com') {
+                console.log('Interacción detectada con Google Drive');
+            }
+        });
+    </script>
+</body>
+</html>
