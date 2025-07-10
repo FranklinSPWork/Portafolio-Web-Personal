@@ -1,0 +1,24 @@
+.pdf-container {
+  width: 100%;
+  max-width: 1000px; /* puedes ajustar esto según tu diseño */
+  margin: 0 auto;
+}
+
+.pdf-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #1d5791; /* color de fondo claro */
+  border: 1px solid #dee2e6; /* borde sutil */
+  border-radius: 5px; /* bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  font-family: Arial, sans-serif; /* fuente legible */
+}
+
+.pdf-viewer {
+  width: 100%;
+  max-width: 1000px;
+  height: calc(1000px * 1.236); /* fuerza manualmente altura A4 */
+  border: none;
+}
